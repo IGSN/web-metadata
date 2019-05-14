@@ -1,5 +1,5 @@
 # baseURI: http://sample.igsn.org/soilarchive-1
-# imports: http://topbraid.org/schema/schema-single-range
+# imports: http://schema.org/
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.w3.org/2006/time
 # imports: http://www.w3.org/ns/dcat
@@ -19,13 +19,17 @@
 
 <http://sample.igsn.org/soilarchive-1>
   a owl:Ontology ;
-  owl:imports <http://topbraid.org/schema/schema-single-range> ;
+  dcterms:created "2019-05-14"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:isFormatOf "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-soilarchive.xml" ;
+  dcterms:isVersionOf "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-soilarchive.xml" ;
+  dcterms:modified "2019-05-15"^^xsd:date ;
+  owl:imports schema: ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.w3.org/2006/time> ;
   owl:imports <http://www.w3.org/ns/dcat> ;
   owl:imports <http://www.w3.org/ns/ssn/> ;
   owl:imports <http://www.w3.org/ns/ssn/ext> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 soilarchive:CDS-NSW
   a prov:Organization ;
