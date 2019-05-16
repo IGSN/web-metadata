@@ -1,0 +1,128 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "dcterms:Location",
+    "centroid" : "POINTZ(121.3724129 -15.47114123 -155.7502)"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "prov:Attribution",
+    "hadRole" : "http://registry.it.csiro.au/def/isotc211/CI_RoleCode/custodian",
+    "agent" : "ga:GA"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "prov:Attribution",
+    "hadRole" : "http://registry.it.csiro.au/def/isotc211/CI_RoleCode/owner",
+    "agent" : "ga:GA"
+  }, {
+    "@id" : "http://sample.igsn.org/GA-1",
+    "@type" : "owl:Ontology",
+    "created" : "2019-05-16",
+    "creator" : "https://orcid.org/0000-0002-3884-3420",
+    "isFormatOf" : "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-geoscienceaustralia.xml",
+    "isVersionOf" : "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-geoscienceaustralia.xml",
+    "modified" : "2019-05-16",
+    "imports" : [ "http://www.opengis.net/ont/geosparql", "http://www.w3.org/ns/ssn/ext", "http://www.w3.org/2006/time", "http://www.w3.org/ns/ssn/", "http://schema.org/", "http://www.w3.org/ns/dcat" ]
+  }, {
+    "@id" : "ga:AU1000011",
+    "@type" : [ "owl:Thing", "sosa:Sample" ],
+    "identifier" : "1000011",
+    "issued" : "2016-10-10",
+    "spatial" : "_:b0",
+    "dcterms:title" : "Sample igsn:AU1000011",
+    "type" : [ "http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample", "http://pid.geoscience.gov.au/def/voc/igsn-codelists/rock" ],
+    "additionalType" : [ "http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample", "http://pid.geoscience.gov.au/def/voc/igsn-codelists/rock" ],
+    "schema:identifier" : "1000011",
+    "title" : "Sample igsn:AU1000011",
+    "url" : "https://pid.geoscience.gov.au/sample/AU1000011",
+    "label" : "Sample igsn:AU1000011",
+    "landingPage" : "https://pid.geoscience.gov.au/sample/AU1000011",
+    "qualifiedAttribution" : [ "_:b1", "_:b2" ]
+  }, {
+    "@id" : "ga:GA",
+    "@type" : "prov:Organization",
+    "label" : "Geoscience Australia"
+  } ],
+  "@context" : {
+    "centroid" : {
+      "@id" : "http://www.w3.org/ns/dcat#centroid",
+      "@type" : "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "agent" : {
+      "@id" : "http://www.w3.org/ns/prov#agent",
+      "@type" : "@id"
+    },
+    "hadRole" : {
+      "@id" : "http://www.w3.org/ns/dcat#hadRole",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "isVersionOf" : {
+      "@id" : "http://purl.org/dc/terms/isVersionOf"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "isFormatOf" : {
+      "@id" : "http://purl.org/dc/terms/isFormatOf"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://schema.org/title"
+    },
+    "qualifiedAttribution" : {
+      "@id" : "http://www.w3.org/ns/prov#qualifiedAttribution",
+      "@type" : "@id"
+    },
+    "landingPage" : {
+      "@id" : "http://www.w3.org/ns/dcat#landingPage",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "url" : {
+      "@id" : "http://schema.org/url",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "schema" : "http://schema.org/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "ga" : "http://sample.igsn.org/GA/",
+    "dcat" : "http://www.w3.org/ns/dcat#",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "sosa" : "http://www.w3.org/ns/sosa/"
+  }
+}

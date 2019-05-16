@@ -23,7 +23,7 @@
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:isFormatOf "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-soilarchive.xml" ;
   dcterms:isVersionOf "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-soilarchive.xml" ;
-  dcterms:modified "2019-05-15"^^xsd:date ;
+  dcterms:modified "2019-05-16"^^xsd:date ;
   owl:imports schema: ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.w3.org/2006/time> ;
@@ -44,7 +44,6 @@ soilarchive:CSAZSXXXXX
   a sosa:Sample ;
   dcterms:created "1959-10-08"^^xsd:date ;
   dcterms:creator soilarchive:CDS-NSW ;
-  dcterms:identifier "soil_specimen_199.CAN.C410.1.2.1" ;
   dcterms:issued "2017-01-03"^^xsd:date ;
   dcterms:spatial [
       a dcterms:Location ;
@@ -52,8 +51,9 @@ soilarchive:CSAZSXXXXX
     ] ;
   dcterms:title "ANZ soil sample" ;
   dcterms:type <http://pid.geoscience.gov.au/def/voc/igsn-codelists/soil> ;
-  dcterms:type <http://www.opengis.net/def/nil/OGC/0/inapplicable> ;
+  dcterms:type <http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample> ;
   schema:additionalType <http://pid.geoscience.gov.au/def/voc/igsn-codelists/soil> ;
+  schema:additionalType <http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample> ;
   schema:creator soilarchive:CDS-NSW ;
   schema:dateCreated "1959-10-08"^^xsd:date ;
   schema:identifier "soil_specimen_199.CAN.C410.1.2.1" ;

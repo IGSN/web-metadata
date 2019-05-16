@@ -1,27 +1,27 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "dcat:Relationship",
-    "relation" : "http://www.anzsoil.org/data/csiro-natsoil/anzsoilml201/soilprofile/soil_profile_199.CAN.C410.1",
-    "hadRole" : "http://pid.geoscience.gov.au/def/voc/igsn-codelists/hasSamplingFeature"
-  }, {
-    "@id" : "_:b1",
     "@type" : "sosa:Sampling",
     "usedProcedure" : "http://www.anzsoil.org/def/au/soil/observation-method/soil-pit"
   }, {
+    "@id" : "_:b1",
+    "@type" : "dcterms:Location",
+    "centroid" : "POINT(146.067917 -34.79847)"
+  }, {
     "@id" : "_:b2",
+    "@type" : "prov:Attribution",
+    "hadRole" : "http://registry.it.csiro.au/def/isotc211/CI_RoleCode/owner",
+    "agent" : "soilarchive:CLW"
+  }, {
+    "@id" : "_:b3",
     "@type" : "prov:Attribution",
     "hadRole" : "http://registry.it.csiro.au/def/isotc211/CI_RoleCode/custodian",
     "agent" : "soilarchive:CLW"
   }, {
-    "@id" : "_:b3",
-    "@type" : "dcterms:Location",
-    "centroid" : "POINT(146.067917 -34.79847)"
-  }, {
     "@id" : "_:b4",
-    "@type" : "prov:Attribution",
-    "hadRole" : "http://registry.it.csiro.au/def/isotc211/CI_RoleCode/owner",
-    "agent" : "soilarchive:CLW"
+    "@type" : "dcat:Relationship",
+    "relation" : "http://www.anzsoil.org/data/csiro-natsoil/anzsoilml201/soilprofile/soil_profile_199.CAN.C410.1",
+    "hadRole" : "http://pid.geoscience.gov.au/def/voc/igsn-codelists/hasSamplingFeature"
   }, {
     "@id" : "_:b5",
     "@type" : "prov:Attribution",
@@ -36,7 +36,7 @@
     },
     "isFormatOf" : "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-soilarchive.xml",
     "isVersionOf" : "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-soilarchive.xml",
-    "modified" : "2019-05-15",
+    "modified" : "2019-05-16",
     "imports" : [ "http://www.w3.org/2006/time", "http://www.w3.org/ns/dcat", "http://www.w3.org/ns/ssn/", "http://schema.org/", "http://www.opengis.net/ont/geosparql", "http://www.w3.org/ns/ssn/ext" ]
   }, {
     "@id" : "soilarchive:CDS-NSW",
@@ -53,12 +53,11 @@
     "dcterms:creator" : {
       "@id" : "soilarchive:CDS-NSW"
     },
-    "dcterms:identifier" : "soil_specimen_199.CAN.C410.1.2.1",
     "issued" : "2017-01-03",
-    "spatial" : "_:b3",
+    "spatial" : "_:b1",
     "dcterms:title" : "ANZ soil sample",
-    "type" : [ "http://pid.geoscience.gov.au/def/voc/igsn-codelists/soil", "http://www.opengis.net/def/nil/OGC/0/inapplicable" ],
-    "additionalType" : "http://pid.geoscience.gov.au/def/voc/igsn-codelists/soil",
+    "type" : [ "http://pid.geoscience.gov.au/def/voc/igsn-codelists/soil", "http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample" ],
+    "additionalType" : [ "http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample", "http://pid.geoscience.gov.au/def/voc/igsn-codelists/soil" ],
     "creator" : "soilarchive:CDS-NSW",
     "dateCreated" : "1959-10-08",
     "identifier" : "soil_specimen_199.CAN.C410.1.2.1",
@@ -66,41 +65,41 @@
     "url" : "http://www.anzsoil.org/data/csiro-natsoil/anzsoilml201/soilspecimen/soil_specimen_199.CAN.C410.1.2.1",
     "label" : "ANZ soil sample",
     "landingPage" : "http://www.anzsoil.org/data/csiro-natsoil/anzsoilml201/soilspecimen/soil_specimen_199.CAN.C410.1.2.1",
-    "qualifiedRelation" : "_:b0",
-    "qualifiedAttribution" : [ "_:b4", "_:b5", "_:b2" ],
-    "isResultOf" : "_:b1",
+    "qualifiedRelation" : "_:b4",
+    "qualifiedAttribution" : [ "_:b3", "_:b5", "_:b2" ],
+    "isResultOf" : "_:b0",
     "isSampleOf" : [ "http://www.anzsoil.org/data/csiro-natsoil/anzsoilml201/soilhorizon/soil_horizon_199.CAN.C410.1.2", "http://www.anzsoil.org/data/csiro-natsoil/anzsoilml201/soil/soil_199.CAN.C410" ]
   } ],
   "@context" : {
-    "hadRole" : {
-      "@id" : "http://www.w3.org/ns/dcat#hadRole",
-      "@type" : "@id"
-    },
-    "relation" : {
-      "@id" : "http://purl.org/dc/terms/relation",
-      "@type" : "@id"
-    },
     "usedProcedure" : {
       "@id" : "http://www.w3.org/ns/sosa/usedProcedure",
-      "@type" : "@id"
-    },
-    "agent" : {
-      "@id" : "http://www.w3.org/ns/prov#agent",
       "@type" : "@id"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "centroid" : {
+      "@id" : "http://www.w3.org/ns/dcat#centroid",
+      "@type" : "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "agent" : {
+      "@id" : "http://www.w3.org/ns/prov#agent",
+      "@type" : "@id"
+    },
+    "hadRole" : {
+      "@id" : "http://www.w3.org/ns/dcat#hadRole",
+      "@type" : "@id"
+    },
     "url" : {
       "@id" : "http://schema.org/url",
       "@type" : "@id"
     },
-    "type" : {
-      "@id" : "http://purl.org/dc/terms/type",
+    "isResultOf" : {
+      "@id" : "http://www.w3.org/ns/sosa/isResultOf",
       "@type" : "@id"
     },
-    "spatial" : {
-      "@id" : "http://purl.org/dc/terms/spatial",
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
       "@type" : "@id"
     },
     "qualifiedRelation" : {
@@ -111,24 +110,24 @@
       "@id" : "http://purl.org/dc/terms/created",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "isResultOf" : {
-      "@id" : "http://www.w3.org/ns/sosa/isResultOf",
-      "@type" : "@id"
-    },
     "isSampleOf" : {
       "@id" : "http://www.w3.org/ns/sosa/isSampleOf",
+      "@type" : "@id"
+    },
+    "qualifiedAttribution" : {
+      "@id" : "http://www.w3.org/ns/prov#qualifiedAttribution",
       "@type" : "@id"
     },
     "issued" : {
       "@id" : "http://purl.org/dc/terms/issued",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "qualifiedAttribution" : {
-      "@id" : "http://www.w3.org/ns/prov#qualifiedAttribution",
-      "@type" : "@id"
-    },
     "creator" : {
       "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial",
       "@type" : "@id"
     },
     "title" : {
@@ -141,12 +140,16 @@
     "identifier" : {
       "@id" : "http://schema.org/identifier"
     },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
     "dateCreated" : {
       "@id" : "http://schema.org/dateCreated",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "additionalType" : {
-      "@id" : "http://schema.org/additionalType",
+    "relation" : {
+      "@id" : "http://purl.org/dc/terms/relation",
       "@type" : "@id"
     },
     "imports" : {
@@ -162,10 +165,6 @@
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "centroid" : {
-      "@id" : "http://www.w3.org/ns/dcat#centroid",
-      "@type" : "http://www.opengis.net/ont/geosparql#asWKT"
     },
     "schema" : "http://schema.org/",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",

@@ -1,0 +1,67 @@
+# baseURI: http://sample.igsn.org/GA-1
+# imports: http://schema.org/
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/dcat
+# imports: http://www.w3.org/ns/ssn/
+# imports: http://www.w3.org/ns/ssn/ext
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ga: <http://sample.igsn.org/GA/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sample.igsn.org/GA-1>
+  a owl:Ontology ;
+  dcterms:created "2019-05-16"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:isFormatOf "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-geoscienceaustralia.xml" ;
+  dcterms:isVersionOf "https://github.com/IGSN/csiro-igsn-schema/blob/master/3.0/example-xml-geoscienceaustralia.xml" ;
+  dcterms:modified "2019-05-16"^^xsd:date ;
+  owl:imports schema: ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports <http://www.w3.org/ns/ssn/> ;
+  owl:imports <http://www.w3.org/ns/ssn/ext> ;
+.
+ga:AU1000011
+  a owl:Thing ;
+  a sosa:Sample ;
+  dcterms:identifier "1000011" ;
+  dcterms:issued "2016-10-10"^^xsd:date ;
+  dcterms:spatial [
+      a dcterms:Location ;
+      dcat:centroid "POINTZ(121.3724129 -15.47114123 -155.7502)"^^<http://www.opengis.net/ont/geosparql#asWKT> ;
+    ] ;
+  dcterms:title "Sample igsn:AU1000011" ;
+  dcterms:type <http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample> ;
+  dcterms:type <http://pid.geoscience.gov.au/def/voc/igsn-codelists/rock> ;
+  schema:additionalType <http://pid.geoscience.gov.au/def/voc/igsn-codelists/PhysicalSample> ;
+  schema:additionalType <http://pid.geoscience.gov.au/def/voc/igsn-codelists/rock> ;
+  schema:identifier "1000011" ;
+  schema:title "Sample igsn:AU1000011" ;
+  schema:url <https://pid.geoscience.gov.au/sample/AU1000011> ;
+  rdfs:label "Sample igsn:AU1000011" ;
+  dcat:landingPage <https://pid.geoscience.gov.au/sample/AU1000011> ;
+  prov:qualifiedAttribution [
+      a prov:Attribution ;
+      dcat:hadRole <http://registry.it.csiro.au/def/isotc211/CI_RoleCode/custodian> ;
+      prov:agent ga:GA ;
+    ] ;
+  prov:qualifiedAttribution [
+      a prov:Attribution ;
+      dcat:hadRole <http://registry.it.csiro.au/def/isotc211/CI_RoleCode/owner> ;
+      prov:agent ga:GA ;
+    ] ;
+.
+ga:GA
+  a prov:Organization ;
+  rdfs:label "Geoscience Australia" ;
+.
